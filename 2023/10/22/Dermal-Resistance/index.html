@@ -256,7 +256,7 @@
 
     <h2 id="Project-Objective"><a href="#Project-Objective" class="headerlink" title="Project Objective"></a>Project Objective</h2><p>Electrodermal activity (EDA) is the property of the human body that causes continuous variation in the electrical characteristics of the skin.<br>In this project, I design a multi-channel electrodermal measurement system to record electrodermal activities from nine body sites.</p>
 <div style = "margin: auto; width: 30%; display: flex; flex-direction: column; text-align: center;"> 
-    <img src="/2023/10/22/Dermal-Resistance/EDA_response_pattern.png" class="" title="EDA_response_pattern"> 
+    <img src="/2023/10/22/Dermal-Resistance/EDA_response_pattern.jpg" class="" title="EDA_response_pattern"> 
     <em>Fig. 1 EDA response pattern</em>
 </div>
 
@@ -265,18 +265,18 @@
 <li>   Power management module to regulate the voltage, control the power consumption and support wired charging.</li>
 <li>   Voltage divider resistor measurement circuit which can measure the resistance between 50 kΩ and 500 MΩ.</li>
 <li>   Storage module to locally save data.<div style = "margin: auto; width: 90%; display: flex; flex-direction: column; text-align: center;"> 
-  <img src="/2023/10/22/Dermal-Resistance/system_architecture.png" class="" title="system_architecture"> 
+  <img src="/2023/10/22/Dermal-Resistance/system_architecture.jpg" class="" title="system_architecture"> 
   <em>Fig. 2 System architecture. The green part represents MCU module; The yellow part represents power management module; The blue part represents voltage divider resistor measurement circuit; The red part represents storage module.</em>
 </div></li>
 </ol>
 <h4 id="The-receiving-end-consists-of-a-PC-and-a-nRF52832-board-as-BLE-master-to-simultaneously-receive-multi-BLE-slave-data"><a href="#The-receiving-end-consists-of-a-PC-and-a-nRF52832-board-as-BLE-master-to-simultaneously-receive-multi-BLE-slave-data" class="headerlink" title="The receiving end consists of a PC and a nRF52832 board as BLE master to simultaneously receive multi BLE slave data."></a>The receiving end consists of a PC and a nRF52832 board as BLE master to simultaneously receive multi BLE slave data.</h4><p>The execution flow of the master &amp; slave devices is as follows:<br>1.	Before the experiment, the master BLE connect multi dermal resistance acquisition devices (also called slaves in the following).<br>2.	At the beginning of the experiment, the master BLE get the current timestamp from computer, package it in a starting command and send it to slaves.<br>3.	When the slave receives this command, it start collecting and save the timestamp and dermal resistance data to local SD card. In the collecting process, the slave saves files periodically.<br>4.	At the end of the experiment, the master sent an ending command including current timestamp.<br>5.	When the slave receives this command, it stops collecting data, save the timestamp and close the file.</p>
 <div style = "margin: auto; width: 90%; display: flex; flex-direction: column; text-align: center;"> 
-    <img src="/2023/10/22/Dermal-Resistance/master_slave.png" class="" title="master_slave"> 
+    <img src="/2023/10/22/Dermal-Resistance/master_slave.jpg" class="" title="master_slave"> 
     <em>Fig. 3  1 master device receives data from 8 slave devices.</em>
 </div>
 
 <h2 id="Hardware"><a href="#Hardware" class="headerlink" title="Hardware"></a>Hardware</h2><div style = "margin: auto; width: 90%; display: flex; flex-direction: column; text-align: center;"> 
-    <img src="/2023/10/22/Dermal-Resistance/PCB_shell_product.png" class="" title="PCB_shell_product"> 
+    <img src="/2023/10/22/Dermal-Resistance/PCB_shell_product.jpg" class="" title="PCB_shell_product"> 
     <em>Fig. 4 (a) Dermal resistant acquisition PCB. The device size is 2.6 cm × 4cm; (b) The shell model; (c)A set of encapsulated devices.</em>
 </div>
 
@@ -287,7 +287,7 @@
 </li>
 </ol>
 <div style = "margin: auto; width: 60%; display: flex; flex-direction: column; text-align: center;"> 
-    <img src="/2023/10/22/Dermal-Resistance/error_measure.png" class="" title="error_measure"> 
+    <img src="/2023/10/22/Dermal-Resistance/error_measure.jpg" class="" title="error_measure"> 
     <em>Fig. 5 The 9 slave devices's detection electrodes are connected together to measure the synchronization.</em>
 </div>
 
@@ -302,7 +302,7 @@
 <li>30 s after the collection begins: The maximum synchronization error between devices is 66ms, as shown in Fig. 6 (b).</li>
 <li>20 min after the collection begins: The maximum synchronization error between devices is 72ms, as shown in Fig. 6 (c).</li>
 <li>60 min after the collection begins: The maximum synchronization error between devices is 78ms, as shown in Fig. 6 (d).<div style = "margin: auto; width: 90%; display: flex; flex-direction: column; text-align: center;"> 
-  <img src="/2023/10/22/Dermal-Resistance/cumulative_error.png" class="" title="cumulative_error"> 
+  <img src="/2023/10/22/Dermal-Resistance/cumulative_error.jpg" class="" title="cumulative_error"> 
   <em>Fig. 6 (a) Total data in 1 hour, and each downward spike indicates that the detection electrodes are connected to a fixed resistor at this time; (b) Data from 9 devices at the 30 s; (c) Data from 9 devices at the 20 min; (d) Data from 9 devices at the 60 min;</em>
 </div></li>
 </ul>
@@ -318,7 +318,7 @@
 </ul>
 <h2 id="Relevant-achievement"><a href="#Relevant-achievement" class="headerlink" title="Relevant achievement"></a>Relevant achievement</h2><p>[1] Xinyu Shui, Rongzan Lin, Ziyang Luo, Bingxin Lin, Xinxin Mao, Haojie Li, Ran Liu*, Dan Zhang*. Bodily Electrodermal Representations for Affective Computing. IEEE Transactions on Affective Computing. DOI: 10.1109&#x2F;TAFFC.2023.3315973.</p>
 <div style = "margin: auto; width: 50%; display: flex; flex-direction: column; text-align: center;"> 
-    <img src="/2023/10/22/Dermal-Resistance/article_figure.png" class="" title="article_figure"> 
+    <img src="/2023/10/22/Dermal-Resistance/article_figure.jpg" class="" title="article_figure"> 
     <em>Fig. 7 The wearable EDA device featured in our collaborative article, for which I was responsible for the collection system including hardware and software.</em>
 </div>
   </div>

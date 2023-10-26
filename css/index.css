@@ -1188,7 +1188,7 @@ hue-6-2: #e6c07b
 .post-header-background-content {
   display: flex;
   margin: 0 auto;
-  padding: 196px 40px 160px;
+  padding: 120px 40px 120px;
   flex-basis: 721px;
   flex-direction: column;
 }
